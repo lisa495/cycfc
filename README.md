@@ -1,5 +1,13 @@
 # 基于 Spring Cloud 微服务架构
 
+[![Beta](https://img.shields.io/badge/beta-0.0.1-brightgreen.svg)](https://github.com/micyo202/cycfc)
+[![Since](https://img.shields.io/badge/since-2018-blue.svg)](https://github.com/micyo202/cycfc)
+[![Java](https://img.shields.io/badge/java-1.8-yellow.svg)](https://github.com/micyo202/cycfc)
+[![Scala](https://img.shields.io/badge/scala-2.11.12-yellow.svg)](https://github.com/micyo202/cycfc)
+[![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/micyo202/cycfc/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/micyo202/cycfc.svg?style=social&label=Stars)](https://github.com/micyo202/cycfc)
+[![GitHub forks](https://img.shields.io/github/forks/micyo202/cycfc.svg?style=social&label=Fork)](https://github.com/micyo202/cycfc)
+
 本项目基于SpringBoot 2.0.4.RELEASE、SpringCloud Finchley.SR1体系实现，支持Java、Scala混编，项目初期孵化中...
 
 利用Spring Boot Admin 来监控各个独立Service的运行状态；利用Hystrix Dashboard来实时查看接口的运行状态和调用频率等。
