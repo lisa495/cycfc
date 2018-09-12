@@ -1,0 +1,22 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8800
+
+turbine:
+  aggregator:
+    cluster-config: default
+  # 配置 Eureka 中的 serviceId 列表，指定要监控的服务，多个服务用“,”隔开
+  app-config: cycfc-zuul-server,cycfc-demo-consumer,cycfc-demo-provider,cycfc-demo-ribbon
+  # 指定集群名称
+  cluster-name-expression: new String("default")
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

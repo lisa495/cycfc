@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: cycfc-eureka-server
+  profiles:
+    active: peer1
+
+eureka:
+  server:
+    #关闭自我保护
+    #enable-self-preservation: false
+    #清理服务器
+    eviction-interval-timer-in-ms: 6000
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+---
+
+spring:
+  profiles: peer1
+
+server:
+  port: 8601
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8602/eureka/
+
+---
+
+spring:
+  profiles: peer2
+
+server:
+  port: 8602
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8601/eureka/

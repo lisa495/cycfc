@@ -1,0 +1,44 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8800
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+
+zuul:
+  #strip-prefix: false
+  routes:
+    #配置路由规则（经典写法）
+    #api-a:
+      #path: /api-a/**
+      #serviceId: cycfc-demo-consumer
+    #api-b:
+      #path: /api-b/**
+      #serviceId: cycfc-demo-ribbon
+    #配置路由规则（简化写法）
+    cycfc-demo-consumer: /consumer/**
+    cycfc-demo-ribbon: /ribbon/**
+    cycfc-demo-scala: /scala/**
+  #排除某些路由
+  #ignored-patterns:
+    #- /cycfc-demo-provider/port
+
+#设置负载超时时间，否则不能及时熔断
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

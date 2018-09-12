@@ -1,0 +1,39 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: cycfc-config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      label: master
+      server:
+        native:
+          search-locations: classpath:/config
+        #git:
+          #uri: https://github.com/micyo202/configuration/
+          #search-paths: cycfc
+          #username:
+          #password:
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8601/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      #cors:
+        #allowed-origins: *
+        #allowed-methods: *
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,22 @@
+server:
+  port: 8861
+
+spring:
+  application:
+    name: cycfc-demo-consumer
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cycfc-config-server
+      #uri: http://localhost:9000
+      label: master
+      profile: dev
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8601/eureka/

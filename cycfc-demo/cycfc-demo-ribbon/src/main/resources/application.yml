@@ -1,0 +1,32 @@
+server:
+  port: 8765
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8601/eureka/
+
+spring:
+  application:
+    name: cycfc-demo-ribbon
+  boot:
+    admin:
+      client:
+        url: http://localhost:8800
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
