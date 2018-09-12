@@ -3,7 +3,7 @@
 [![Beta](https://img.shields.io/badge/beta-0.0.1-brightgreen.svg)](https://github.com/micyo202/cycfc)
 [![Since](https://img.shields.io/badge/since-2018-blue.svg)](https://github.com/micyo202/cycfc)
 [![Java](https://img.shields.io/badge/java-1.8-yellow.svg)](https://github.com/micyo202/cycfc)
-[![Scala](https://img.shields.io/badge/scala-2.11.12-yellow.svg)](https://github.com/micyo202/cycfc)
+[![Scala](https://img.shields.io/badge/scala-2.11.12-red.svg)](https://github.com/micyo202/cycfc)
 [![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/micyo202/cycfc/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/micyo202/cycfc.svg?style=social&label=Stars)](https://github.com/micyo202/cycfc)
 [![GitHub forks](https://img.shields.io/github/forks/micyo202/cycfc.svg?style=social&label=Fork)](https://github.com/micyo202/cycfc)
